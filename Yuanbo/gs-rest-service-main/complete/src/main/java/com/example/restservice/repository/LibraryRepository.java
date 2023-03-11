@@ -64,23 +64,6 @@ public class LibraryRepository {
         }
 
 
-
-
-//    public Book getBookByCriteria(String name, String author) {
-//        String sql = "SELECT * FROM Book WHERE name=? and author=?";
-//        try{
-//            BookEntity entity = jdbcTemplate.queryForObject(sql, new BookRowMapper(), name, author);
-//            return modelMapper.map(entity, Book.class);
-//        }
-//        catch (EmptyResultDataAccessException exception){
-//            return null;
-//        }
-//        catch(Exception e){
-//            throw  new DatabaseException(DATABASE_EXCEPTION);
-//        }
-//    }
-
-
         public Library getLibraryByCriteria(String name, String zipCode){
             try {
                 String sql = "Select * from Library where name=? and zip_code=?";
